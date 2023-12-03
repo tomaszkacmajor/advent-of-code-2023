@@ -102,7 +102,7 @@
             output[0] = output[lines.Length + 1] = new string('.', newLineLength);
             for (int i = 1; i < newLineLength - 1; i++) 
             {
-                output[i] = "." + lines[i-1] + ".";
+                output[i] = $".{lines[i-1]}.";
             }
             return output;
         }
