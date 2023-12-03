@@ -47,7 +47,7 @@
 
         public void Solution2()
         {
-            string[] lines = File.ReadAllLines(@"..\..\..\inputs\input2-2.txt");
+            string[] lines = File.ReadAllLines(@"..\..\..\inputs\input2-1.txt");
 
             int cnt = 0;
             foreach (var line in lines)

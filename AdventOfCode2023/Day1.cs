@@ -20,7 +20,7 @@
 
         public void Solution2()
         {
-            string[] lines = File.ReadAllLines(@"..\..\..\inputs\input1-2.txt");
+            string[] lines = File.ReadAllLines(@"..\..\..\inputs\input1-1.txt");
             Dictionary<string, string> list = new()
             {
                 { "one", "1" },
