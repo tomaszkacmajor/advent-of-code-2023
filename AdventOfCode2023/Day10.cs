@@ -15,7 +15,7 @@
         public void Solution1()
         {
             string[] lines = File.ReadAllLines(@"..\..\..\inputs\input10-1.txt");
-            char[,] array = GetArray(lines);
+            char[,] array = lines.ToChar2DArray();
             FindStartPos(lines, out var startX, out var startY);
 
             array[startX, startY] = '7';
@@ -44,7 +44,7 @@
         public void Solution2()
         {
             string[] lines = File.ReadAllLines(@"..\..\..\inputs\input10-1.txt");
-            char[,] array = GetArray(lines);
+            char[,] array = lines.ToChar2DArray();
             FindStartPos(lines, out var startX, out var startY);
 
             array[startX, startY] = '7';
@@ -107,18 +107,6 @@
                     break;
                 }
             }
-        }
-
-        private static char[,] GetArray(string[] lines)
-        {
-            char[,] array = new char[lines.Length, lines[0].Length];
-            for (int i = 0; i < lines.Length; i++)
-            {
-                for (int j = 0; j < lines[i].Length; j++)
-                    array[i, j] = lines[i][j];
-            }
-
-            return array;
         }
 
         private Direction GetOpposite(Direction nextDir)
